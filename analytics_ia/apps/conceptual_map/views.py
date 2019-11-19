@@ -73,7 +73,7 @@ def users_from_concepts(request):
             user_subject = UserSubject.objects.filter(
                 subject=subject,
                 user=user
-            ).order_by('-time_index').first()
+            ).order_by('id').first()
 
             if user_subject:
                 user_subjects.append({
@@ -83,13 +83,15 @@ def users_from_concepts(request):
                     'time_index': user_subject.time_index
                 })
 
-        user_data = {
-            'pk': user.pk,
-            'username': user.username,
-            'subjects': user_subjects
-        }
+        if user_subjects:
 
-        users_data.append(user_data)
+            user_data = {
+                'pk': user.pk,
+                'username': user.username,
+                'subjects': user_subjects
+            }
+
+            users_data.append(user_data)
 
     return Response(users_data)
 

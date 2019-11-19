@@ -131,8 +131,6 @@ def user_answer(request):
 
             current_evidences = {}
 
-            from IPython import embed; embed()
-
             for predecessor in bayesian_network.get_predecessors(new_evidence):
 
                 # Iteration through all successors of each predecessor
