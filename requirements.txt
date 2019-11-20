@@ -4,3 +4,11 @@ pandas
 djangorestframework
 wrapt
 djangorestframework-recursive
+django-cors-headers
+pgmpy
+networkx
+torch
+tqdm
+joblib
+scipy
+pyparsing
