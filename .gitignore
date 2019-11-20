@@ -107,4 +107,4 @@ venv.bak/
 .vscode/
 .idea/
 
-*.sqlite3
+#*.sqlite3
