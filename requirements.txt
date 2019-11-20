@@ -5,7 +5,7 @@ djangorestframework
 wrapt
 djangorestframework-recursive
 django-cors-headers
-pgmpy
+pgmpy==0.1.7
 networkx
 torch
 tqdm
